@@ -1,16 +1,13 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "./assets/vite.svg";
-import heroImg from "./assets/hero.png";
-import WelcomeCard from "./components/WelcomeCard";
 import "./App.css";
+import ProfileCard from "./components/ProfileCard";
 
 function App() {
   return (
     <>
       <div>
-        <WelcomeCard name="Arjun" role="Full Stack Developer" />
-        <WelcomeCard name="Rahul" role="Frontend Developer" />
+        <ProfileCard name="Arjun" role="Full Stack Developer" />
+        <ProfileCard name="Rahul" role="Frontend Developer" />
+        <ProfileCard name="Priya" role="UI Designer" />
       </div>
     </>
   );
