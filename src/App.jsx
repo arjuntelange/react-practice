@@ -1,13 +1,13 @@
 import "./App.css";
-import ProductCard from "./components/ProductCard";
+import SocialLinks from "./components/SocialLinks";
 
 function App() {
   return (
     <>
       <div>
-        <ProductCard emoji="💻" product="Laptop" price="64,000" />
-        <ProductCard emoji="📱" product="Smartphone" price="24,000" />
-        <ProductCard emoji="📷" product="Camera" price="30,000" />
+        <SocialLinks platform="LinkedIn" url="https://www.linkedin.com/feed/" />
+        <SocialLinks platform="GitHub" url="https://github.com/" />
+        <SocialLinks platform="Portfolio" url="https://arjuntelange.github.io/portfolio-website/" />
       </div>
     </>
   );
