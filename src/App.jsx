@@ -1,11 +1,11 @@
 import "./App.css";
-import LikeButton from "./state-projects/like-button/LikeButton";
+import PasswordToggle from "./state-projects/password-toggle/PasswordToggle";
 
 function App() {
   return (
     <>
       <div className="main-container">
-        <LikeButton />
+        <PasswordToggle />
       </div>
     </>
   );
