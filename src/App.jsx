@@ -1,11 +1,11 @@
 import "./App.css";
-import PasswordToggle from "./state-projects/password-toggle/PasswordToggle";
+import LiveGreeting from "./state-projects/live-greeting/LiveGreeting";
 
 function App() {
   return (
     <>
       <div className="main-container">
-        <PasswordToggle />
+        <LiveGreeting/>
       </div>
     </>
   );
