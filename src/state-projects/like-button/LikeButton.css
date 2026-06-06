@@ -1,0 +1,41 @@
+.container {
+  width: 240px;
+  height: 280px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  border: 1px solid #333;
+  border-radius: 24px;
+  background: rgb(68 3 26);
+
+  color: white;
+  font-family: sans-serif;
+}
+
+h1 {
+  margin-bottom: 30px;
+}
+
+button {
+  padding: 10px 20px;
+
+  border: none;
+  border-radius: 24px;
+  background: #f5276f;
+
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 600;
+
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(244, 11, 93, 0.42);
+
+  cursor: pointer;
+}

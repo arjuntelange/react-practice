@@ -1,11 +1,11 @@
 import "./App.css";
-import CounterApp from "./state-projects/counter-app/CounterApp";
+import LikeButton from "./state-projects/like-button/LikeButton";
 
 function App() {
   return (
     <>
-      <div className="container">
-        <CounterApp />
+      <div className="main-container">
+        <LikeButton />
       </div>
     </>
   );
