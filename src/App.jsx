@@ -1,11 +1,11 @@
 import "./App.css";
-import LiveGreeting from "./state-projects/live-greeting/LiveGreeting";
+import ThemeToggle from "./state-projects/theme-toggle/ThemeToggle";
 
 function App() {
   return (
     <>
       <div className="main-container">
-        <LiveGreeting/>
+        <ThemeToggle/>
       </div>
     </>
   );
