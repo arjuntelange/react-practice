@@ -1,11 +1,11 @@
 import "./App.css";
-import ThemeToggle from "./state-projects/theme-toggle/ThemeToggle";
+import CharCount from "./state-projects/character-counter/CharCount";
 
 function App() {
   return (
     <>
       <div className="main-container">
-        <ThemeToggle/>
+        <CharCount/>
       </div>
     </>
   );
