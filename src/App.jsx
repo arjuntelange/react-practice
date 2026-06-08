@@ -1,11 +1,11 @@
 import "./App.css";
-import CharCount from "./state-projects/character-counter/CharCount";
+import FAQToggle from "./state-projects/FAQ-toggle/FAQToggle";
 
 function App() {
   return (
     <>
       <div className="main-container">
-        <CharCount/>
+        <FAQToggle/>
       </div>
     </>
   );
