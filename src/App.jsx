@@ -1,11 +1,11 @@
 import "./App.css";
-import FAQToggle from "./state-projects/FAQ-toggle/FAQToggle";
+import TodoList from "./state-projects/todo-list/TodoList";
 
 function App() {
   return (
     <>
       <div className="main-container">
-        <FAQToggle/>
+        <TodoList/>
       </div>
     </>
   );
