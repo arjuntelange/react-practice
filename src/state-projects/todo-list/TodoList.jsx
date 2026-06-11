@@ -7,12 +7,30 @@ function TodoList() {
 
   function addTask() {
     if (!task.trim()) return;
-    setTasks((prevTasks) => [...prevTasks, task]);
+    setTasks((prevTasks) => [...prevTasks, { text: task, completed: false }]);
     setTask("");
   }
 
   function deleteTask(deleteIndex) {
     setTasks(tasks.filter((task, index) => index !== deleteIndex));
+  }
+
+  function toggleTask(toggleIndex) {
+    setTasks(
+      tasks.map((elem, index) => {
+        if (index === toggleIndex) {
+          return { ...elem, completed: !elem.completed };
+        }
+
+        return elem;
+      }),
+    );
+  }
+
+  function handleKeyDown(event) {
+    if (event.key === "Enter") {
+      addTask();
+    }
   }
 
   return (
@@ -24,6 +42,7 @@ function TodoList() {
           onChange={(event) => {
             setTask(event.target.value);
           }}
+          onKeyDown={handleKeyDown}
           type="text"
           placeholder="Enter a task"
           value={task}
@@ -35,7 +54,14 @@ function TodoList() {
       <ul>
         {tasks.map((elem, index) => (
           <li key={index}>
-            <span>{elem}</span>
+            <input
+              type="checkbox"
+              checked={elem.completed}
+              onChange={() => toggleTask(index)}
+            />
+            <span className={elem.completed ? "completed-task" : ""}>
+              {elem.text}
+            </span>
             <button onClick={() => deleteTask(index)}>❌</button>
           </li>
         ))}

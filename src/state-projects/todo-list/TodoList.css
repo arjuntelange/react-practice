@@ -125,3 +125,28 @@ li button {
 
   font-size: 0.8rem;
 }
+
+li input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+
+  accent-color: #16a34a;
+
+  transform: scale(1.2);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+li input[type="checkbox"]:hover {
+  transform: scale(1.35);
+}
+
+.completed-task {
+  text-decoration: line-through;
+  color: #9ca3af;
+}
+
+li:has(input[type="checkbox"]:checked) {
+  background: #f0fdf4;
+  border-left-color: #22c55e;
+}
