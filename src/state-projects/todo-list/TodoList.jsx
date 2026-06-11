@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./TodoList.css"
+import "./TodoList.css";
 
 function TodoList() {
   const [task, setTask] = useState("");
@@ -7,8 +7,12 @@ function TodoList() {
 
   function addTask() {
     if (!task.trim()) return;
-    setTasks([...tasks, task]);
+    setTasks((prevTasks) => [...prevTasks, task]);
     setTask("");
+  }
+
+  function deleteTask(deleteIndex) {
+    setTasks(tasks.filter((task, index) => index !== deleteIndex));
   }
 
   return (
@@ -30,9 +34,16 @@ function TodoList() {
 
       <ul>
         {tasks.map((elem, index) => (
-          <li key={index}>{elem}</li>
+          <li key={index}>
+            <span>{elem}</span>
+            <button onClick={() => deleteTask(index)}>❌</button>
+          </li>
         ))}
       </ul>
+
+      <div className="counter-box">
+        <span className="tasks-counter">Total Tasks: {tasks.length}</span>
+      </div>
     </div>
   );
 }
