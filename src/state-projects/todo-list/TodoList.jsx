@@ -74,23 +74,23 @@ function TodoList() {
       </div>
 
       <ul>
-        {filteredTasks.length === 0 && (
-          <p className="empty-message">No tasks found.</p>
+        {filteredTasks.length === 0 ? (
+          <li className="empty-message">No tasks found.</li>
+        ) : (
+          filteredTasks.map((elem) => (
+            <li key={elem.id}>
+              <input
+                type="checkbox"
+                checked={elem.completed}
+                onChange={() => toggleTask(elem.id)}
+              />
+              <span className={elem.completed ? "completed-task" : ""}>
+                {elem.text}
+              </span>
+              <button onClick={() => deleteTask(elem.id)}>❌</button>
+            </li>
+          ))
         )}
-        
-        {filteredTasks.map((elem) => (
-          <li key={elem.id}>
-            <input
-              type="checkbox"
-              checked={elem.completed}
-              onChange={() => toggleTask(elem.id)}
-            />
-            <span className={elem.completed ? "completed-task" : ""}>
-              {elem.text}
-            </span>
-            <button onClick={() => deleteTask(elem.id)}>❌</button>
-          </li>
-        ))}
       </ul>
 
       <div className="filter-section">

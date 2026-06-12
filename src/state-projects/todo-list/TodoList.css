@@ -181,3 +181,11 @@ li:has(input[type="checkbox"]:checked) {
   background: #4f46e5 !important;
   color: white !important;
 }
+
+.empty-message {
+  text-align: center;
+  color: #9ca3af;
+  font-style: italic;
+  border-left: none !important;
+  background: transparent !important;
+}
