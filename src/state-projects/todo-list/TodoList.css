@@ -150,3 +150,34 @@ li:has(input[type="checkbox"]:checked) {
   background: #f0fdf4;
   border-left-color: #22c55e;
 }
+
+.filter-section {
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+}
+
+.filter-section button {
+  padding: 4px 10px;
+
+  border: none;
+  border-radius: 10px;
+  background: #E6F1FF;
+
+  color: #222;
+  font-family: sans-serif;
+  font-size: 0.8rem;
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filter-section button:hover {
+  transform: scale(1.04);
+  background: #B8D9FF;
+}
+
+.active-filter {
+  background: #4f46e5 !important;
+  color: white !important;
+}

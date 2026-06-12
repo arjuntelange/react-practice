@@ -4,21 +4,29 @@ import "./TodoList.css";
 function TodoList() {
   const [task, setTask] = useState("");
   const [tasks, setTasks] = useState([]);
+  const [filter, setFilter] = useState("all");
 
   function addTask() {
     if (!task.trim()) return;
-    setTasks((prevTasks) => [...prevTasks, { text: task, completed: false }]);
+    setTasks((prevTasks) => [
+      ...prevTasks,
+      {
+        id: Date.now(),
+        text: task,
+        completed: false,
+      },
+    ]);
     setTask("");
   }
 
-  function deleteTask(deleteIndex) {
-    setTasks(tasks.filter((task, index) => index !== deleteIndex));
+  function deleteTask(taskId) {
+    setTasks(tasks.filter((elem) => elem.id !== taskId));
   }
 
-  function toggleTask(toggleIndex) {
+  function toggleTask(taskId) {
     setTasks(
-      tasks.map((elem, index) => {
-        if (index === toggleIndex) {
+      tasks.map((elem) => {
+        if (elem.id === taskId) {
           return { ...elem, completed: !elem.completed };
         }
 
@@ -31,6 +39,20 @@ function TodoList() {
     if (event.key === "Enter") {
       addTask();
     }
+  }
+
+  function handleFilter(filterType) {
+    setFilter(filterType);
+  }
+
+  let filteredTasks = tasks;
+
+  if (filter === "active") {
+    filteredTasks = tasks.filter((task) => !task.completed);
+  }
+
+  if (filter === "completed") {
+    filteredTasks = tasks.filter((task) => task.completed);
   }
 
   return (
@@ -52,20 +74,45 @@ function TodoList() {
       </div>
 
       <ul>
-        {tasks.map((elem, index) => (
-          <li key={index}>
+        {filteredTasks.length === 0 && (
+          <p className="empty-message">No tasks found.</p>
+        )}
+        
+        {filteredTasks.map((elem) => (
+          <li key={elem.id}>
             <input
               type="checkbox"
               checked={elem.completed}
-              onChange={() => toggleTask(index)}
+              onChange={() => toggleTask(elem.id)}
             />
             <span className={elem.completed ? "completed-task" : ""}>
               {elem.text}
             </span>
-            <button onClick={() => deleteTask(index)}>❌</button>
+            <button onClick={() => deleteTask(elem.id)}>❌</button>
           </li>
         ))}
       </ul>
+
+      <div className="filter-section">
+        <button
+          className={filter === "all" ? "active-filter" : ""}
+          onClick={() => handleFilter("all")}
+        >
+          All
+        </button>
+        <button
+          className={filter === "active" ? "active-filter" : ""}
+          onClick={() => handleFilter("active")}
+        >
+          Active
+        </button>
+        <button
+          className={filter === "completed" ? "active-filter" : ""}
+          onClick={() => handleFilter("completed")}
+        >
+          Completed
+        </button>
+      </div>
 
       <div className="counter-box">
         <span className="tasks-counter">Total Tasks: {tasks.length}</span>
