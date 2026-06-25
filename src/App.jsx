@@ -1,11 +1,12 @@
 import "./App.css";
-import TodoList from "./state-projects/todo-list/TodoList";
+import UseRefHook from "./hooks-practice/UseRefHook";
+import ThemeToggle from "./state-projects/theme-toggle/ThemeToggle";
 
 function App() {
   return (
     <>
       <div className="main-container">
-        <TodoList/>
+        <UseRefHook/>
       </div>
     </>
   );
