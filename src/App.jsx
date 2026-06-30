@@ -1,12 +1,11 @@
 import "./App.css";
-import UseFormStatus from "./hooks-practice/UseFormStatus";
-import UseOptimistic from "./hooks-practice/UseOptimistic";
+import PostComment from "./state-projects/comment-post/PostComment";
 
 function App() {
   return (
     <>
       <div className="main-container">
-        <UseOptimistic/>
+        <PostComment/>
       </div>
     </>
   );
