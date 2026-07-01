@@ -1,33 +1,20 @@
-import { Routes, Route, NavLink } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import "./App.css";
-import Home from "./routing/student-portal/Home";
-import About from "./routing/student-portal/About";
-import Contact from "./routing/student-portal/Contact";
+import Dashboard from "./routing/dashboard/Dashboard";
+import Profile from "./routing/dashboard/Profile";
+import Courses from "./routing/dashboard/Courses";
+import Settings from "./routing/dashboard/Settings";
 
 function App() {
-  const getActiveClass = ({ isActive }) => (isActive ? "active" : "");
-
   return (
     <>
       <div className="main-container">
-        <nav>
-          <NavLink to="/" className={getActiveClass}>
-            Home
-          </NavLink>
-          {" | "}
-          <NavLink to="/About" className={getActiveClass}>
-            About
-          </NavLink>
-          {" | "}
-          <NavLink to="/Contact" className={getActiveClass}>
-            Contact
-          </NavLink>
-        </nav>
-
         <Routes>
-          <Route path="/" element={<Home />}></Route>
-          <Route path="/About" element={<About />} />
-          <Route path="/Contact" element={<Contact />} />
+          <Route path="/dashboard" element={<Dashboard />}>
+            <Route path="profile" element={<Profile />} />
+            <Route path="courses" element={<Courses />} />
+            <Route path="settings" element={<Settings />} />
+          </Route>
         </Routes>
       </div>
     </>
