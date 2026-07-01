@@ -1,19 +1,27 @@
-import { Link, Routes, Route } from "react-router-dom";
+import { Routes, Route, NavLink } from "react-router-dom";
 import "./App.css";
-import SearchFilter from "./hooks-practice/SearchFilter";
-import PostComment from "./state-projects/comment-post/PostComment";
 import Home from "./routing/student-portal/Home";
 import About from "./routing/student-portal/About";
 import Contact from "./routing/student-portal/Contact";
 
 function App() {
+  const getActiveClass = ({ isActive }) => (isActive ? "active" : "");
+
   return (
     <>
       <div className="main-container">
         <nav>
-          <Link to="/">Home</Link>{" | "}
-          <Link to="/About">About</Link>{" | "}
-          <Link to="/Contact">Contact</Link>
+          <NavLink to="/" className={getActiveClass}>
+            Home
+          </NavLink>
+          {" | "}
+          <NavLink to="/About" className={getActiveClass}>
+            About
+          </NavLink>
+          {" | "}
+          <NavLink to="/Contact" className={getActiveClass}>
+            Contact
+          </NavLink>
         </nav>
 
         <Routes>

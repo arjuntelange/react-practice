@@ -6,4 +6,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 20px;
+}
+
+.active {
+  color: #00a6ff;
+  font-weight: 700;
+  font-family: sans-serif;
 }
