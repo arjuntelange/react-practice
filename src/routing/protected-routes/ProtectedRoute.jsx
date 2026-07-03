@@ -1,9 +1,11 @@
 import React from "react";
+import { Navigate } from "react-router-dom";
+import AccessDenied from "./AccessDenied";
 
-function ProtectedRoute({children}) {
+function ProtectedRoute({ children }) {
   const isLoggedIn = false;
 
-  return isLoggedIn ? children : <h2>Access Denied🚧</h2>;
+  return isLoggedIn ? children : <AccessDenied />;
 }
 
 export default ProtectedRoute;
