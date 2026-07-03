@@ -1,17 +1,23 @@
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
-import Home from "./routing/page-not-found/Home";
-import NotFound from "./routing/page-not-found/NotFound";
-import About from "./routing/page-not-found/About";
+import Login from "./routing/login-page/Login";
+import Dashboard from "./routing/login-page/Dashboard";
+import Profiles from "./routing/login-page/dashboard/Profiles";
+import Courses from "./routing/login-page/dashboard/Courses";
+import Settings from "./routing/login-page/dashboard/Settings";
 
 function App() {
   return (
     <>
       <div className="main-container">
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="*" element={<NotFound />} />
+          <Route path="/" element={<Login />} />
+          <Route path="/dashboard" element={<Dashboard />}>
+            <Route index element={<Profiles/>} />
+            <Route path="/dashboard/profiles" element={<Profiles />} />
+            <Route path="/dashboard/courses" element={<Courses />} />
+            <Route path="/dashboard/settings" element={<Settings />} />
+          </Route>
         </Routes>
       </div>
     </>

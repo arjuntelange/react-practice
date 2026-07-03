@@ -1,0 +1,18 @@
+.login-form {
+    padding: 40px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.login-form input {
+    padding: 12px 18px;
+
+    border: none;
+    border-radius: 14px;
+}
+
+h2 {
+    text-align: center;
+}
