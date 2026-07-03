@@ -1,15 +1,13 @@
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
-import Users from "./routing/dynamic-users/Users";
-import UserProfile from "./routing/dynamic-users/UserProfile";
+import Products from "./routing/search-params/Products";
 
 function App() {
   return (
     <>
       <div className="main-container">
         <Routes>
-          <Route path="/" element={<Users/>} />
-          <Route path="/users/:id" element={<UserProfile/>} />
+          <Route path="/" element={<Products/>} />
         </Routes>
       </div>
     </>
