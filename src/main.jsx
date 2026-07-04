@@ -3,15 +3,15 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import StudentForm from "./routing/action-demo/StudentForm.jsx";
-import { studentAction } from "./routing/action-demo/actions.js";
-import { studentsLoader } from "./routing/action-demo/loader.js";
+import StudentPortal from "./routing/final-data-router/StudentPortal.jsx";
+import { studentsLoader } from "./routing/final-data-router/loader.js";
+import { studentAction } from "./routing/final-data-router/action.js";
 
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <StudentForm />,
+    element: <StudentPortal />,
     loader: studentsLoader,
     action: studentAction,
   },
