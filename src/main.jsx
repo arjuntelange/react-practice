@@ -3,14 +3,17 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Students from "./routing/loader-demo/Students.jsx";
-import { studentsLoader } from "./routing/loader-demo/loader.js";
+import StudentForm from "./routing/action-demo/StudentForm.jsx";
+import { studentAction } from "./routing/action-demo/actions.js";
+import { studentsLoader } from "./routing/action-demo/loader.js";
+
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Students />,
+    element: <StudentForm />,
     loader: studentsLoader,
+    action: studentAction,
   },
 ]);
 
