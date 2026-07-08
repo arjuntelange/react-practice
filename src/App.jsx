@@ -1,12 +1,12 @@
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
-import PasswordVerification from "./form-handling/PasswordVerification";
+import StudentCourses from "./form-handling/StudentCourses";
 
 function App() {
   return (
     <>
       <div className="main-container">
-        <PasswordVerification />
+        <StudentCourses />
       </div>
     </>
   );
