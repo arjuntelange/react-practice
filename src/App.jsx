@@ -1,12 +1,12 @@
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
-import StudentCourses from "./form-handling/StudentCourses";
+import BasicZod from "./form-handling/BasicZod";
 
 function App() {
   return (
     <>
       <div className="main-container">
-        <StudentCourses />
+        <BasicZod />
       </div>
     </>
   );
