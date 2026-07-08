@@ -1,12 +1,12 @@
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
-import SimpleForm from "./form-handling/SimpleForm";
+import LoginVerification from "./form-handling/LoginVerification";
 
 function App() {
   return (
     <>
       <div className="main-container">
-        <SimpleForm/>
+        <LoginVerification />
       </div>
     </>
   );
