@@ -1,0 +1,45 @@
+.theme-card {
+  width: 420px;
+  padding: 2rem;
+  border-radius: 20px;
+  text-align: center;
+
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(10px);
+
+  box-shadow:
+    0 10px 30px rgba(0,0,0,0.15);
+}
+
+nav h2 {
+  font-size: 2rem;
+  margin-bottom: 8px;
+}
+
+nav p {
+  opacity: 0.8;
+  font-size: 1rem;
+}
+
+button {
+  margin-top: 20px;
+  padding: 12px 24px;
+
+  border: none;
+  border-radius: 12px;
+
+  font-size: 1rem;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: translateY(-3px);
+}
+
+button:active {
+  transform: scale(0.97);
+}
