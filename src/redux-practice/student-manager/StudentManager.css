@@ -1,5 +1,5 @@
 .student-card {
-  width: 450px;
+  width: 500px;
   padding: 2rem;
   border-radius: 20px;
   background: white;
@@ -25,6 +25,10 @@
   border-radius: 8px;
 
   font-size: 16px;
+}
+
+.input-group button {
+    margin: 0;
 }
 
 .student-item {
