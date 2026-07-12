@@ -1,12 +1,12 @@
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
-import BasicZod from "./form-handling/BasicZod";
+import Counter from "./redux-practice/counter-app/components/Counter";
 
 function App() {
   return (
     <>
       <div className="main-container">
-        <BasicZod />
+        <Counter />
       </div>
     </>
   );
