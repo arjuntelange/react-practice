@@ -1,14 +1,17 @@
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
-import "./redux-practice/theme-toggle/ThemeToggle.css";
 import { useSelector } from "react-redux";
-import StudentManager from "./redux-practice/student-manager/components/StudentManager";
+import ProductList from "./redux-practice/shopping-cart/components/ProductList";
+import Cart from "./redux-practice/shopping-cart/components/Cart";
 
 function App() {
   return (
     <>
       <div className="main-container">
-        <StudentManager />
+        <div className="shopping-container">
+          <ProductList />
+          <Cart />
+        </div>
       </div>
     </>
   );
