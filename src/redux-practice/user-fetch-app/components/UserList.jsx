@@ -23,8 +23,6 @@ function UserList() {
 
       {error && <p className="text-red-400 font-medium">{error}</p>}
 
-      {console.log(users)}
-
       <div className="space-y-4">
         {users.map((user) => (
           <div

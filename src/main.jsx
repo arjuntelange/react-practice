@@ -4,7 +4,7 @@ import "./index.css";
 import App from "./App.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Provider } from "react-redux";
-import store from "./redux-practice/user-fetch-app/store/store.js";
+import store from "./redux-practice/quote-generator/store/store.js";
 
 const router = createBrowserRouter([
   {
